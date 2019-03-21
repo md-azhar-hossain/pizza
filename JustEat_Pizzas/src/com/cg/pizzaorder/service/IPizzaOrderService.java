@@ -1,0 +1,15 @@
+package com.cg.pizzaorder.service;
+
+import com.cg.pizzaorder.bean.Customer;
+import com.cg.pizzaorder.bean.PizzaOrder;
+import com.cg.pizzaorder.exception.PizzaExecption;
+
+public interface IPizzaOrderService {
+	public int placeOrder(Customer customer, PizzaOrder pizza) throws PizzaExecption;
+	public PizzaOrder getOrderDetails(int orderid) throws PizzaExecption;
+	public Customer getCustomerDetails(int orderid) throws PizzaExecption;
+	public boolean validateName(String name);
+	public boolean validateAddress(String address);
+	public boolean validatePh(String ph);
+	
+}
